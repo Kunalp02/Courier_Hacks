@@ -1,0 +1,11 @@
+{% block content %}
+<div class="d-flex align-items-center justify-content-center" style="margin-top:20%">
+    {% if status == "Success" %}
+    <h2 class="text-center">THANKS YOUR PAYMENT HAS BEEN RECEIVED</h2>
+    {% else %}
+    {{reason}}
+    {{description}}
+    <h2>SORRY, YOUR PAYMENT HAS BEEN FAILED</h2>
+    {% endif %}
+</div>
+{% endblock %}

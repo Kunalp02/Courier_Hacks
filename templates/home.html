@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!-- ========================= SECTION MAIN ========================= -->
+<section class="section-intro padding-y-sm">
+	<div id="carouselExampleSlidesOnly" class="carousel slide container" data-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active intro-banner-wrap">
+			<a href="#"><img class="d-block w-100" src="{% static 'images/banners/PNY.jpg' %}" class="img-fluid rounded" alt="First slide"></a>
+		  </div>
+		  <div class="carousel-item intro-banner-wrap">
+			<a><img class="d-block w-100" src="{% static 'images/banners/PNY.jpg' %}" class="img-fluid rounded" alt="Second slide"></a>
+		  </div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	<a href="{% url 'store' %}" class="btn btn-outline-dark float-right">See all</a>
+	<h3 class="section-title">Popular products</h3>
+</header><!-- sect-heading -->
+
+	
+<div class="row">
+    {% for product in products %}
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{product.get_url}}" class="img-wrap"> <img src="{{product.images.url}}"> </a>
+			<figcaption class="info-wrap">
+				<a href="{{product.get_url}}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">₹{{product.price}}</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+    {% endfor %}
+</div><!-- container // -->
+</section>
+
+<section class="section-name padding-y-sm">
+	<div class="container">
+	
+	<header class="section-heading">
+		<a href="{% url 'store' %}" class="btn btn-outline-dark float-right">See all</a>
+		<h3 class="section-title">Categories</h3>
+	</header><!-- sect-heading -->
+	
+		
+	<div class="row">
+		{% for category in categories %}
+		<div class="col-md-3">
+			<div class="card card-product-grid">
+				<h2>{{category.images.url}}</h2>
+				<a href="{{ category.get_url }}" class="img-wrap"> <img src="{{category.cat_image.url}}"></a>
+				<figcaption class="info-wrap">
+					<a href="{{ category.get_url }}" class="title">{{ category.category_name }} </a>
+				</figcaption>
+			</div>
+		</div> <!-- col.// -->
+		{% endfor %}
+	</div><!-- container // -->
+	</section>
+
+
+<!-- ========================= SECTION  END// ========================= -->
+
+<section class="section-intro padding-y-sm">
+	<div class="container">
+		<div class="intro-banner-wrap">
+			<img src="{% static 'images/banners/cover2.jpg' %}" class="img-fluid rounded">
+		</div>
+	</div> <!-- container //  -->
+</section>
+
+
+
+
+{% endblock content %}
