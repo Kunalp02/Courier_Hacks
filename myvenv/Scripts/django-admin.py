@@ -1,4 +1,4 @@
-#!C:\Kunal\iNeuron\iNeruron_Project - Copy\shop\myvenv\Scripts\python.exe
+#!C:\Kunal\Django Coursera\Heroku\Courier_Hacks\myvenv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

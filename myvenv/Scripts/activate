@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Kunal\iNeuron\iNeruron_Project - Copy\shop\myvenv"
+VIRTUAL_ENV="C:\Kunal\Django Coursera\Heroku\Courier_Hacks\myvenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
