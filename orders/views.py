@@ -85,12 +85,13 @@ def place_order(request, total = 0, quantity = 0): # order_payment
             # )
             order = Order.objects.get(user=current_user, is_ordered=False, order_number=order_number)
             order.razorpay_order_id = razorpay_order["id"]
+            url = request.META['HTTP_HOST']
             order.save()
             return render(
                 request,
                 "orders/payments.html",
                 {
-                    "callback_url": "http://" + "127.0.0.1:8000" + "/razorpay/callback/",
+                    "callback_url": f"http://{url}/razorpay/callback/",
                     "razorpay_key": settings.RAZORPAY_KEY_ID,
                     "order": order,
                     'cart_items' : cart_items,
