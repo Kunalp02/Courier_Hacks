@@ -146,7 +146,7 @@ def order_complete(request):
                     "to": {
                     "email": to_email,
                     },
-                    "template": "YAXZCZQEXJ4JMQNSPPHVHDCB2FGV",
+                    "template": "FX7HJ0EJ0B4GJTMG2SVPRGST9ZZ8",
                     "data": {
                     "recipientName": username,
                     "mail_subject": mail_subject,
@@ -162,7 +162,7 @@ def order_complete(request):
             "to": {
             "phone_number": phone_number,
             },
-            "template": "YAXZCZQEXJ4JMQNSPPHVHDCB2FGV",
+            "template": "FX7HJ0EJ0B4GJTMG2SVPRGST9ZZ8",
             "data": {
             "recipientName": username,
             "mail_subject": mail_subject,
