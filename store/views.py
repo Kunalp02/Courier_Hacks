@@ -30,7 +30,7 @@ def store(request, category_slug=None):
         categories = get_object_or_404(Category, slug=category_slug)
         
         products = Product.objects.filter(
-            category=categories, is_available=True, price= Q(price__lt=50) and Q(price__gt=12000))
+            category=categories, is_available=True, price= Q(price__lt=50) and Q(price__gt=1000))
         print(products)
        
         
