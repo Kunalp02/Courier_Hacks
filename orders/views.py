@@ -91,7 +91,7 @@ def place_order(request, total = 0, quantity = 0): # order_payment
                 request,
                 "orders/payments.html",
                 {
-                    "callback_url": f"https://{url}/razorpay/callback/",
+                    "callback_url": f"http://{url}/razorpay/callback/",
                     "razorpay_key": settings.RAZORPAY_KEY_ID,
                     "order": order,
                     'cart_items' : cart_items,
