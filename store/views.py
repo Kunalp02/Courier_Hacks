@@ -22,15 +22,15 @@ def store(request, category_slug=None):
         print(select_min)
         print(select_max)
 
-    categories = None
-    products = None
+    # categories = None
+    # products = None
 
     if category_slug != None:
         # it will bring categories if found other wise it will show 404 Error
         categories = get_object_or_404(Category, slug=category_slug)
         
         products = Product.objects.filter(
-            category=categories, is_available=True, price= Q(price__lt=50) and Q(price__gt=1000))
+            category=categories, is_available=True)
         print(products)
        
         
