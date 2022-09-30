@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-# postgres://ierddsxnfxoulc:5e095cdb26329b158b077a396b5dbc00966cf2232f141a8ba8589d9968a02cf9@ec2-52-4-87-74.compute-1.amazonaws.com:5432/d3mbgtq0tl1aed
 from pathlib import Path
 from decouple import config
 import django_heroku
@@ -19,19 +18,15 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = 'django-insecure-zms6d_ucmat2ytihzf-c6u2^px@egu+!#561^he7hguq87ikv5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -62,7 +57,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CSRF_FAILURE_VIEW = True
 
 ROOT_URLCONF = 'shop.urls'
 
@@ -88,8 +82,7 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 
 AUTH_USER_MODEL  = 'accounts.Account'
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -99,8 +92,7 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -118,8 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -130,8 +120,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 import os
 # STATIC_URL = '/static/'
@@ -162,8 +150,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'error',
 }
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
