@@ -34,6 +34,7 @@
       <span>{{single_product.countReview}} reviews</span>
     </div>
 
+    {% if features_filter %}
     <div class="container">
       <ul class="list-group list-group-vertical">
         <li class="mt-2">{{features_filter.line1}}</li>
@@ -42,6 +43,7 @@
         <li class="mt-2">{{features_filter.line4}}</li>
       </ul>
     </div>
+    {% endif %}
 
 
     <div class="mt-5"> 
