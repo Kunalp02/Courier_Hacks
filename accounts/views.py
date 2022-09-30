@@ -19,7 +19,7 @@ import requests
 from trycourier import Courier
 from decouple import config
 
-auth_token = 'pk_prod_TG1GS5TYWYMN47QGJZGXG1YBXQJM'
+auth_token = config('auth_token')
 client = Courier(auth_token=auth_token)
 
 
