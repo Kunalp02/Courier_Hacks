@@ -14,9 +14,11 @@ import json
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from trycourier import Courier
+from decouple import config
 
-client = Courier(auth_token="pk_prod_TG1GS5TYWYMN47QGJZGXG1YBXQJM")
 
+auth_token = config('auth_token')
+client = Courier(auth_token=auth_token)
 
 def payments(request):
     return render(request, 'orders/payments.html')
